@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+
+
+    <title>Open-Close</title>
+    <link href="/main.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="eel.js"></script>
+    <script src="/main.js"></script>
+    <link rel="icon" type="image/ico" href="/login.ico">
+
+    <script type="text/javascript">
+        function alerted1() {
+            eel.open();
+        }
+        function alerted2() {
+            eel.close();
+        }
+    </script>
+    
+    <script>
+        function path (){
+    // получаем значение введенных рублей
+    var path = document.getElementById("path_id").value;
+    
+    eel.path_str(path);
+    }
+    </script>
+    
+
+</head>
+<body>
+
+    <!INPUT>
+
+    <div class="inputbox">
+        <input required="required" id='path_id' type="text">
+        <span>Path</span>
+        <i></i>
+    </div>
+
+    <!INPUT>
+
+    <div class="parentClass">
+        <h1>GAME STARTER</h1>
+        <div class="childClass">
+            <div id="rectangle"></div>
+        </div>
+    </div>
+
+    <div class="parentClass_GP">
+        <img id='gamepad' src="gamepad.png" alt="gamepad">
+        <div class="childClass_GP">
+            <div id="circle"></div>
+        </div>
+    </div>
+
+
+    <button class="button1" type="submit" id="submit" onclick="alerted1();">OPEN</button>
+    <button class="button2" type="submit" id="submit" onclick="alerted2();">CLOSE</button>
+    <button class="submit" type="submit" id="submit_path" onclick="path()">Submit</button>
+    <button class="group1" type="submit" id="id_group1" name='group1' onclick="path()">Group 1</button>
+    <button class="group2" type="submit" id="id_group2" onclick="path()">Group 2</button> 
+    <button class="group3" type="submit" id="id_group3" onclick="path()">Group 3</button>
+</body>
+</html>
